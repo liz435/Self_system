@@ -1,8 +1,6 @@
 
 //  const density = ".:-i|=+%O#@"
 
-const video = document.querySelector('#videoElement');
-
 //Core
 
 
