@@ -19,6 +19,16 @@ let searchInput = "      HNIOBhwioqdnio"
 
  function setup() {
   var canvas = createCanvas(300, 300);
+  window.navigator.mediaDevices.getUserMedia({ video: true })
+    .then(stream => {
+        video.srcObject = stream;
+        video.onloadedmetadata = (e) => {
+            video.play();
+        };
+    })
+    .catch( () => {
+        alert('You have give browser the permission to run Webcam and mic ;( ');
+    });
   // canvas.parent('canvasForHTML');
   //  video = createCapture(VIDEO);
 
@@ -33,16 +43,7 @@ let searchInput = "      HNIOBhwioqdnio"
  }
  
  function draw() {
-  window.navigator.mediaDevices.getUserMedia({ video: true })
-  .then(stream => {
-      video.srcObject = stream;
-      video.onloadedmetadata = (e) => {
-          video.play();
-      };
-  })
-  .catch( () => {
-      alert('You have give browser the permission to run Webcam and mic ;( ');
-  });
+
     // video.resize(350,350);
   //  video.hide();
    video.loadPixels();
