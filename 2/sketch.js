@@ -35,7 +35,7 @@ let searchInput = "      HNIOBhwioqdnio"
   // inputs.position(0, 0);
   // inputs.size(100);
 
-   video.resize(340, 180);
+   video.size(340, 180);
    asciiDiv = createDiv();
   
  }
