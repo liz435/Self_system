@@ -1,12 +1,16 @@
 
 //  const density = ".:-i|=+%O#@"
 
+const video = document.querySelector('#videoElement');
+
+//Core
+
+
 let input=[];
 let searchInput = "      HNIOBhwioqdnio"
 
  const density = searchInput + ';.:\░▒▓█';
 
- let video;
  let asciiDiv;
  
  function preload(){
@@ -29,7 +33,16 @@ let searchInput = "      HNIOBhwioqdnio"
  }
  
  function draw() {
-
+  window.navigator.mediaDevices.getUserMedia({ video: true })
+  .then(stream => {
+      video.srcObject = stream;
+      video.onloadedmetadata = (e) => {
+          video.play();
+      };
+  })
+  .catch( () => {
+      alert('You have give browser the permission to run Webcam and mic ;( ');
+  });
     // video.resize(350,350);
   //  video.hide();
    video.loadPixels();
