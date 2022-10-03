@@ -2,7 +2,7 @@
 //  const density = ".:-i|=+%O#@"
 
 //Core
-
+let video;
 
 let input=[];
 let searchInput = "      HNIOBhwioqdnio"
