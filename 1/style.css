@@ -1,0 +1,17 @@
+#title{
+    text-align: center;
+}
+
+canvas{
+
+}
+
+#defaultCanvas0{
+    width: 800px;
+    margin-left: 125px;
+    margin-right: auto;
+    margin-top: 50px;
+}
+body{
+    background-color: coral;
+}
