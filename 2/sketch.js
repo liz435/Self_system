@@ -3,7 +3,6 @@
 
 //Core
 let video;
-
 let input=[];
 let searchInput = "      HNIOBhwioqdnio"
 
@@ -13,13 +12,16 @@ let searchInput = "      HNIOBhwioqdnio"
  
  function preload(){
   // video = loadImage('2001.png');
+ video = createCapture(VIDEO);
  }
 
  function setup() {
   var canvas = createCanvas(300, 300);
+  canvas.parent('canvasForHTML');
+
 
   // canvas.parent('canvasForHTML');
-  //  video = createCapture(VIDEO);
+  
 
   // inputs = createInput("2020");
   // inputs.input();
@@ -32,18 +34,9 @@ let searchInput = "      HNIOBhwioqdnio"
  }
  
  function draw() {
-  window.navigator.mediaDevices.getUserMedia({ video: true })
-    .then(stream => {
-        video.srcObject = stream;
-        video.onloadedmetadata = (e) => {
-            video.play();
-        };
-    })
-    .catch( () => {
-        alert('You have give browser the permission to run Webcam and mic ;( ');
-    });
+
     // video.resize(350,350);
-  //  video.hide();
+   video.hide();
    video.loadPixels();
    let asciiImage = " ";
    for (let j = 0; j < video.height; j++) {
