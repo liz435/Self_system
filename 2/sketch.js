@@ -2,11 +2,10 @@
 //  const density = ".:-i|=+%O#@"
 
 //Core
-let video;
-let input=[];
-let searchInput = "      HNIOBhwioqdnio"
-
- const density = searchInput + ';.:\░▒▓█';
+let inputW=[];
+let inputQ;
+let mod = "";
+let idKey ="    .:░▒▓█";
 
  let asciiDiv;
  
@@ -30,8 +29,25 @@ let searchInput = "      HNIOBhwioqdnio"
 
    video.size(340,180);
    asciiDiv = createDiv();
+
+   inputQ = createInput("type something below but there is no undo");
+   inputQ.input(data);
+   inputQ.position(150, 600);
+   inputQ.size(300);
+   
+   inputW = createInput(" ");
+   inputW.input(data);
+   inputW.position(150, 650);
+   inputW.size(300);
   
  }
+
+ function data() {
+  mod = inputW.value();
+  idKey+=mod;
+return idKey;
+
+}
  
  function draw() {
 
@@ -46,9 +62,9 @@ let searchInput = "      HNIOBhwioqdnio"
        const g = video.pixels[pixelIndex + 1];
        const b = video.pixels[pixelIndex + 2];
        const avg = (r + g + b) / 3;
-       const len = density.length;
+       const len = idKey.length;
        const charIndex = floor(map(avg, 0, 255, 0, len));
-       const c = density.charAt(charIndex);
+       const c = idKey.charAt(charIndex);
        if (c == " ") asciiImage += ("&nbsp;");
        else asciiImage += c;
      }

@@ -1,42 +1,39 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #000;
+
   font-family: 'Courier';
   color: rgb(0, 0, 0);
   font-size: 4pt;
   line-height: 3pt;
 }
 
+div{
+    margin-top: -100px;
+    margin-left: 200px;
+    margin-right: auto;
+}
+
+h1{
+    margin-top: 150px;
+    text-align: center;
+    font-size: 20px;
+}
 #title{
     text-align: center;
     font-size: 3rem;
 }
 
+.p5{
+
+}
 
 body{
     background-color: aqua;
     font-size: 5px;
 }
 
-canvas{
 
-    white-space: pre;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#container {
-	margin: 0px auto;
-	width: 500px;
-	height: 375px;
-	border: 10px #333 solid;
-}
-#videoElement {
-	width: 500px;
-	height: 375px;
-	background-color: #666;
-}
 
 
   
